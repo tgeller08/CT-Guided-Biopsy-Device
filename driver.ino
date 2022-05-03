@@ -155,6 +155,10 @@ void loop()
   gyro_y = Wire.read()<<8 | Wire.read(); // reading registers: 0x45 (GYRO_YOUT_H) and 0x46 (GYRO_YOUT_L)
   gyro_z = Wire.read()<<8 | Wire.read(); // reading registers: 0x47 (GYRO_ZOUT_H) and 0x48 (GYRO_ZOUT_L)
 
+gyro_x = gyro_x > 180 ? gyro_x-360 : gyro_x;
+gyro_y = gyro_y > 180 ? gyro_y-360 : gyro_y;
+gyro_x = gyro_z > 180 ? gyro_z-360 : gyro_z;
+
   char ACCEL_XOUT_LABEL[14] = {'A','C','C','E','L','_','X','O','U','T',':',' '};
   char ACCEL_XOUT[20];
   convert_int16_to_str(accelerometer_x, ACCEL_XOUT);
