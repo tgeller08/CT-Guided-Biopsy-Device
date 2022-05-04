@@ -158,7 +158,7 @@ void loop()
 gyro_x = gyro_x > 180 ? gyro_x-360 : gyro_x;
 gyro_y = gyro_y > 180 ? gyro_y-360 : gyro_y;
 gyro_x = gyro_z > 180 ? gyro_z-360 : gyro_z;
-
+/*
   char ACCEL_XOUT_LABEL[14] = {'A','C','C','E','L','_','X','O','U','T',':',' '};
   char ACCEL_XOUT[20];
   convert_int16_to_str(accelerometer_x, ACCEL_XOUT);
@@ -181,31 +181,29 @@ gyro_x = gyro_z > 180 ? gyro_z-360 : gyro_z;
   bleuart.write(ACCEL_ZOUT_LABEL);
   bleuart.write(ACCEL_ZOUT);
   bleuart.write(newline);
+*/
 
-
-  char GYRO_XOUT_LABEL[14] = {'G','Y','R','O','_','X','O','U','T',':',' '};
+  char GYRO_XOUT_LABEL[3] = {'X',':',' '};//[14] = {'G','Y','R','O','_','X','O','U','T',':',' '};
   char GYRO_XOUT[20];
   convert_int16_to_str(gyro_x, GYRO_XOUT);
   bleuart.write(GYRO_XOUT_LABEL);
   bleuart.write(GYRO_XOUT);
-  bleuart.write(newline);
 
 
-  char GYRO_YOUT_LABEL[14] = {'G','Y','R','O','_','Y','O','U','T',':',' '};
+  char GYRO_YOUT_LABEL[4] = {' ','Y',':',' '}; // = {'G','Y','R','O','_','Y','O','U','T',':',' '};
   char GYRO_YOUT[20];
   convert_int16_to_str(gyro_y, GYRO_YOUT);
   bleuart.write(GYRO_YOUT_LABEL);
   bleuart.write(GYRO_YOUT);
-  bleuart.write(newline);
 
 
-  char GYRO_ZOUT_LABEL[14] = {'G','Y','R','O','_','Z','O','U','T',':',' '};
+  char GYRO_ZOUT_LABEL[4] = {' ','Z', ':',' '}; // [14] = {'G','Y','R','O','_','Z','O','U','T',':',' '};
   char GYRO_ZOUT[20];
   convert_int16_to_str(gyro_z, GYRO_ZOUT);
   bleuart.write(GYRO_ZOUT_LABEL);
   bleuart.write(GYRO_ZOUT);
   bleuart.write(newline);
-
+/*
   char TEMP_LABEL[14] = {'T','E','M','P','(','C',')',':',' '};
   char charBuf[20];
   dtostrf(adjusted_temp, 4, 6, charBuf);
@@ -213,6 +211,7 @@ gyro_x = gyro_z > 180 ? gyro_z-360 : gyro_z;
   bleuart.write(charBuf);
   bleuart.write(newline);
   bleuart.write(newline);
+*/
   delay(1000);
   
    //Forward data from HW Serial to BLEUART
