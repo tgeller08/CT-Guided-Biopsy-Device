@@ -35,6 +35,11 @@ An effective reduction in time needed for a CT-guided biopsy would lead to reduc
 
 ## Prototype Design
 
+<img width="354" alt="prototype_design" src="https://user-images.githubusercontent.com/62673738/185673557-cf650789-88d8-4e46-b7d9-3769cf72c3d5.png">
+
+## Project Presentation
+
+[Final Presentation.pdf](https://github.com/tgeller08/CT-Guided-Biopsy-Device/files/9384210/Final.Presentation.pdf)
 
 
 
